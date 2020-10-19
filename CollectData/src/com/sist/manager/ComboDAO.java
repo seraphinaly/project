@@ -37,10 +37,10 @@ public class ComboDAO {
                
                String sql="INSERT INTO change_spec VALUES("
                        +"?,?,?)";
+               ps=conn.prepareStatement(sql);
                ps.setInt(1, vo.getCom_no());
                ps.setInt(2, vo.getCate_no());
                ps.setString(3, vo.getTag_option_data());
-               ps=conn.prepareStatement(sql);
                
                ps.executeUpdate();
             } catch(Exception ex){
